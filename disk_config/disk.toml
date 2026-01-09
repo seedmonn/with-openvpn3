@@ -1,3 +1,6 @@
-[[customizations.filesystem]]
+[customizations.filesystem]
+root.type = "btrfs"
+
+[[customizations.filesystem.partitions]]
 mountpoint = "/"
 minsize = "20 GiB"
