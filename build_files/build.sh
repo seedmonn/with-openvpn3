@@ -10,7 +10,12 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y tmux 
+dnf5 install -y tmux
+
+# Install openvpn3
+dnf5 -y copr enable dsommers/openvpn3
+dnf5 install -y openvpn3-client
+dnf5 -y copr disable dsommers/openvpn3
 
 # Use a COPR Example:
 #
